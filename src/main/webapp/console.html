@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<!-- SITE TITLE -->
+		<title>Do API - 控制台</title>
+		<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+		<!-- STYLESHEETS -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/templatemo0style.css">
+
+	</head>
+
+	<body class="templatemo-bg-gray" data-spy="scroll" data-target="#rock-navigation">
+		<!-- START NAVIGATION -->
+		<div class="navbar navbar-default bs-dos-nav" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button class="navbar-toggle" data-toggle="collapse" data-target="#rock-navigation">
+						<span class="icon icon-bar"></span>
+						<span class="icon icon-bar"></span>
+						<span class="icon icon-bar"></span>
+					</button>
+					<div>
+						<a href="#" class="navbar-brand" style="float: none;">Do - API</a>
+						<p style="color: #666666; font-size: 15px;">虚拟接口,做接口就是这么简单</p>
+					</div>
+				</div>
+				<nav class="collapse navbar-collapse" id="rock-navigation">
+					<ul class="nav navbar-nav navbar-right main-navigation text-uppercase">
+						<li><a href="index.html" class="smoothScroll">首页</a></li>
+						<li><a href="#">文档</a></li>
+						<li><a href="#">项目管理</a></li>
+						<li><a href="#">帮助</a></li>
+						<li><a href="#">吐槽</a></li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">个人中心 <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="#">个人资料</a></li>
+								<li><a href="#">新建应用</a></li>
+								<li role="separator" class="divider"></li>
+								<li><a href="#">退出</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+
+			</div>
+		</div>
+		<!-- END NAVIGATION -->
+		<div class="page-header">
+			<div class="container">
+				<h1>我的项目 <small style="float: right;">管理我创建的项目</small></h1>
+			</div>
+		</div>
+		<div class="container">
+			<button type="button" class="btn btn-default pull-right" onclick="javascrtpt:window.location.href='console_newApp.html'"><i class="fa fa-plus"> 添加项目</i></button>
+		</div>
+		<div class="container" style="padding-top: 20px;">
+			<table class="table table-hover" style="border:solid; border-color: #dddddd; border-width: 1px;">
+				<!--<caption style="background-color: #dddddd; height: 50px;">
+					
+				</caption>-->
+				<thead style="background-color: #eeeeee;">
+					<tr>
+						<th></th>
+						<th>名称</th>
+						<th>介绍</th>
+						<!--<th>平台</th>-->
+						<th>状态</th>
+						<th>最后更新</th>
+						<th>操作</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><img src="images/favicon.ico" width="60px" height="60px" alt="" /></td>
+						<td scope="row">聚美优品</td>
+						<td>聚美优品的介绍内容在这里显示</td>
+						<!--<td><label class="label label-default" href="#" role="button">web</label> <label class="label label-default" href="#" role="button">ios</label></td>-->
+						<td><span class="label label-success">启动</span></td>
+						<td>2016-03-13</td>
+						<td>
+							<button class="btn btn-default">编辑</button>
+							<button class="btn btn-default">删除</button>
+						</td>
+
+					</tr>
+					<tr>
+						<td><img src="images/favicon.ico" width="60px" height="60px" alt="" /></td>
+						<td scope="row">聚美优品2</td>
+						<td>聚美优品的介绍内容在这里显示</td>
+						<!--<td><label class="label label-default" href="#" role="button">web</label> <label class="label label-default" href="#" role="button">ios</label></td>-->
+						<td><span class="label label-success">启动</span></td>
+						<td>2016-03-13</td>
+						<td>
+							<button class="btn btn-default">编辑</button>
+							<button class="btn btn-default">删除</button>
+						</td>
+
+					</tr><tr>
+						<td><img src="images/favicon.ico" width="60px" height="60px" alt="" /></td>
+						<td scope="row">聚美优品3</td>
+						<td>聚美优品的介绍内容在这里显示</td>
+						<!--<td><label class="label label-default" href="#" role="button">web</label> <label class="label label-default" href="#" role="button">ios</label></td>-->
+						<td><span class="label label-warning">停止</span></td>
+						<td>2016-03-13</td>
+						<td>
+							<button class="btn btn-default">编辑</button>
+							<button class="btn btn-default">删除</button>
+						</td>
+
+					</tr>
+
+				</tbody>
+			</table>
+		</div>
+		<footer class="footer navbar-fixed-bottom ">
+			<div class="container">
+				<div class="text-center">
+					<p style="color: #999999;">版权所有(C) 北京布衣科技有限公司 ICP证号：京ICP备14015023号-2</p>
+				</div>
+			</div>
+		</footer>
+<script type="text/javascript">
+   window.onload = function(){
+     //取得页面上所有的td
+    var tds = document.getElementsByTagName("td");
+    //为每个td赋于onclick事件
+    for(var i=0; i<tds.length; i++){
+     tds[i].onclick = function(){
+      //要跳转的网址接到document.location.href后面即可
+      //此例是将td内的值当成要跳转的页面
+      document.location.href="my_home.html";
+     };
+    }
+   };
+  </script>
+		<script src="js/jquery.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+	</body>
+
+</html>

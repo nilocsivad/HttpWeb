@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<!-- http://zengxiantao.iteye.com/blog/1881706 -->
+<log4j:configuration xmlns:log4j='http://jakarta.apache.org/log4j/'>
+
+	<appender name="Console" class="org.apache.log4j.ConsoleAppender">
+		<layout class="org.apache.log4j.PatternLayout">
+			<!-- <param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss SSS\} %-5p [%F:%L] - %m%n" /> -->
+			<param name="ConversionPattern" value="%-5p [%F:%L] - %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="DailyLog4j" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="threshold" value="warn" />
+		<param name="file" value="${catalina.home}/logs/HttpWeb/HttpWeb-log.log" />
+		<param name="append" value="true" />
+		<param name="datePattern" value="'.'yyyy-MM-dd'.log'" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%d{MMdd HH:mm:ss SSS\} %-5p] [%t] %c{3\} - %m%n" />
+		</layout>
+	</appender>
+
+	<root>
+		<priority value="info" />
+		<appender-ref ref="Console" />
+		<appender-ref ref="DailyLog4j" />
+	</root>
+
+	<logger name="com.iamVip.HttpWeb" additivity="false">
+		<level value="warn" />
+		<appender-ref ref="Console" />
+		<appender-ref ref="DailyLog4j" />
+	</logger>
+
+	<logger name="com.iamVip.HttpWeb.database.access.layout" additivity="false">
+		<level value="debug" />
+		<appender-ref ref="Console" />
+	</logger>
+
+	<logger name="org.apache.ibatis.logging.jdbc" additivity="false">
+		<level value="debug" />
+		<appender-ref ref="Console" />
+	</logger>
+
+</log4j:configuration>

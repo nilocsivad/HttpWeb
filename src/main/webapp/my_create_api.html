@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="utf-8">
+		<title>新建接口</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<!-- Le styles -->
+		<script type="text/javascript" src="assets/js/jquery.js"></script>
+
+		<link rel="stylesheet" href="assets/css/bootstrap.css">
+		<link rel="stylesheet" href="assets/css/style.css">
+		<link rel="stylesheet" href="assets/css/loader-style.css">
+
+		<!--custom风格-->
+		<link rel="stylesheet" href="assets/css/extra-pages.css">
+		<!--验证-->
+		<link href="assets/js/validate/validate.css" rel="stylesheet">
+		<!--表格风格-->
+		<link href="assets/js/footable/css/footable.core.css?v=2-0-1" rel="stylesheet" type="text/css">
+		<link href="assets/js/footable/css/footable.standalone.css" rel="stylesheet" type="text/css">
+		<link href="assets/js/footable/css/footable-demos.css" rel="stylesheet" type="text/css">
+
+		<link rel="stylesheet" href="assets/js/dataTable/lib/jquery.dataTables/css/DT_bootstrap.css">
+		<link rel="stylesheet" href="assets/js/dataTable/css/datatables.responsive.css">
+		<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+		<!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+		<!-- Fav and touch icons -->
+		<link rel="shortcut icon" href="assets/ico/minus.png">
+	</head>
+
+	<body>
+		<style type="text/css">
+			table input {
+				border-top: 0px;
+				border-left: 0px;
+				border-right: 0px;
+				width: 100%;
+				/*background-color: transparent;*/
+			}
+		</style>
+
+		<!-- TOP NAVBAR -->
+		<nav role="navigation" class="navbar navbar-static-top">
+			<div class="container-fluid">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" class="navbar-toggle" type="button">
+						<span class="entypo-menu"></span>
+					</button>
+					<button class="navbar-toggle toggle-menu-mobile toggle-left" type="button">
+						<span class="entypo-list-add"></span>
+					</button>
+
+					<div id="logo-mobile" class="visible-xs">
+						<h1>Do API<span>v1.3</span></h1>
+					</div>
+
+				</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
+					<ul class="nav navbar-nav">
+						<li>
+							<a data-toggle="dropdown" class="dropdown-toggle dropdown-menu-left" href="#">
+								<span class="entypo-down-open-big"></span>&#160;&#160;微信
+							</a>
+							<ul style="margin-top:14px;" role="menu" class="dropdown-wrap dropdown-menu">
+								<li>
+									<a href="#">
+										微博</a>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<a href="#">
+										淘宝</a>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<a href="#">
+										新浪</a>
+								</li>
+							</ul>
+						</li>
+
+					</ul>
+
+					<ul style="margin-right:0;" class="nav navbar-nav navbar-right">
+						<li>
+							<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+								<img alt="" class="admin-pic img-circle" src="https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=3410483824,3817000729&fm=58">Hi, 崔旺 <b class="caret"></b>
+							</a>
+							<ul style="margin-top:14px;" role="menu" class="dropdown-setting dropdown-menu">
+								<li>
+									<a href="#">
+										<span class="entypo-user"></span>&#160;&#160;控制台</a>
+								</li>
+								<li>
+									<a href="#">
+										<span class="entypo-vcard"></span>&#160;&#160;设置</a>
+								</li>
+								<li>
+									<a href="#">
+										<span class="entypo-lifebuoy"></span>&#160;&#160;帮助</a>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<a href="http://themeforest.net/item/apricot-navigation-admin-dashboard-template/7664475?WT.ac=category_item&WT.z_author=themesmile">
+										<span class="entypo-cancel"></span>&#160;&#160;退出</a>
+								</li>
+							</ul>
+						</li>
+						<!---->
+						<li>
+							<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+								<span class="icon-gear"></span>&#160;&#160;换肤</a>
+							<ul role="menu" class="dropdown-setting dropdown-menu">
+
+								<li class="theme-bg">
+									<div id="button-bg"></div>
+									<div id="button-bg2"></div>
+									<div id="button-bg3"></div>
+									<div id="button-bg5"></div>
+									<div id="button-bg6"></div>
+									<div id="button-bg7"></div>
+									<div id="button-bg8"></div>
+									<div id="button-bg9"></div>
+									<div id="button-bg10"></div>
+									<div id="button-bg11"></div>
+									<div id="button-bg12"></div>
+									<div id="button-bg13"></div>
+								</li>
+							</ul>
+						</li>
+
+					</ul>
+
+				</div>
+				<!-- /.navbar-collapse -->
+			</div>
+			<!-- /.container-fluid -->
+		</nav>
+		<!-- /END OF TOP NAVBAR -->
+
+		<!-- SIDE MENU -->
+		<div id="skin-select">
+			<div id="logo">
+				<h1>Do API<span style="margin-left: 5px;">内测</span></h1>
+			</div>
+
+			<a id="toggle">
+				<span class="entypo-menu"></span>
+			</a>
+
+			<div style="margin-top: -18px;">
+				<ul class="topnav menu-left-nest">
+					<li>
+						<a class="tooltip-tip ajax-load" href="index.html" title="概览">
+							<i class="icon-window"></i>
+							<span>概览</span>
+
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="skin-part">
+				<div id="tree-wrap">
+					<div class="side-bar">
+
+						<ul class="topnav menu-left-nest">
+							<li>
+								<a href="#" style="border-left:0px solid!important;" class="title-menu-left">
+
+									<span class="design-kit"></span>
+									<i data-toggle="tooltip" class="entypo-cog pull-right config-wrap"></i>
+
+								</a>
+							</li>
+
+							<li>
+								<a class="tooltip-tip ajax-load" href="myapi.html" title="我的接口">
+									<i class="icon-mail"></i>
+									<span>我的接口</span>
+									<div class="noft-blue">25</div>
+								</a>
+							</li>
+
+							<li>
+								<a class="tooltip-tip" href="#" title="API调试">
+									<i class="icon-document-new"></i>
+									<span>API调试</span>
+								</a>
+								<ul>
+									<li>
+										<a class="tooltip-tip2 ajax-load" href="blank_page.html" title="Blank Page"><i class="icon-media-record"></i><span>Blank Page</span></a>
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<a class="tooltip-tip " href="login.html" title="接口文档">
+									<i class="icon-download"></i>
+									<span>接口文档</span>
+								</a>
+							</li>
+
+						</ul>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- END OF SIDE MENU -->
+
+		<!--  PAPER WRAP -->
+		<div class="wrap-fluid">
+			<div class="container-fluid paper-wrap bevel tlbr">
+
+				<!-- CONTENT -->
+				<!-- BREADCRUMB -->
+				<ul id="breadcrumb">
+					<li>
+						<span class="entypo-home"></span>
+					</li>
+					<li><i class="fa fa-lg fa-angle-right"></i>
+					</li>
+					<li><a href="#" title="Sample page 1">新建接口</a>
+					</li>
+				</ul>
+				<!-- END OF BREADCRUMB -->
+
+				<!--说明-->
+				<div class="content-wrap">
+					<div class="row">
+
+					</div>
+				</div>
+				<!--说明结束-->
+				<!-- 创建步骤-->
+				<div class="content-wrap">
+					<div class="time-wrap">
+						<div class="row">
+							<div class="col-md-12">
+								<!-- The time line -->
+								<ul class="timeline">
+									<!-- timeline time label -->
+									<li class="time-label">
+										<span class="bg-red">
+                                        准备制作了
+                                    </span>
+										<div class="timeline-item">
+											<div class="timeline-body">
+												<h4>Base URL: http://www.do-api.com/cuiwang/weixin/</h4>
+											</div>
+										</div>
+									</li>
+									<!-- /.timeline-label -->
+									<!-- timeline item -->
+									<li>
+										<i class="fa  bg-time">1</i>
+										<div class="timeline-item">
+											<!--<span class="time"><i class="fa fa-clock-o"></i> 12:05</span>-->
+											<h4 class="timeline-header"><a href="#">1.接口地址</a> (实际地址 = Base URL + API地址)</h4>
+
+											<div class="timeline-body">
+												<div class="well">
+													<h5>请填写API地址和说明,如果不需要请求参数和返回结果,可以直接点击下面确定按钮.</h5>
+												</div>
+												<div>
+													
+													<form action="contact" id="contact-form" class="form-horizontal">
+														<fieldset>
+
+															<div class="control-group">
+																<label style="margin-bottom: 5px;" class="control-label" for="name">API地址: *</label>
+																<div class="controls">
+																	<input type="text" class="form-control" name="name" id="name" placeholder="例如: login.action" onkeyup="changeValue(this.value)">
+																</div>
+															</div>
+
+															<div class="control-group" style="margin:10px 0;">
+																<label style="margin-bottom: 5px;" class="control-label" for="message">接口介绍: *</label>
+																<div class="controls">
+																	<input type="text" class="form-control" name="message" id="message" placeholder="例如: 此接口用于前台登录">
+																</div>
+															</div>
+
+															<div class="control-group">
+																<label style="margin-bottom: 5px;" class="control-label" for="name">请求方式:</label>
+																<div class="controls">
+																	<div class="input-group">
+																		<div class="input-group-btn">
+																			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">GET <span class="caret"></span></button>
+																			<ul class="dropdown-menu">
+																				<li><a href="#">GET</a></li>
+																				<li role="separator" class="divider"></li>
+																				<li><a href="#">POST</a></li>
+																			</ul>
+																		</div>
+																		<!-- /btn-group -->
+																		<input type="text" class="form-control" placeholder="http://www.do-api.com/cuiwang/weixin/" disabled="disabled" id="weburl">
+																	</div>
+																</div>
+															</div>
+
+															<div class="form-actions" style="margin:25px 0 10px 0;">
+																<a class="btn btn-warning btn-flat btn-xs">完成 <span class="fa fa-check"></span></a>
+															</div>
+														</fieldset>
+													</form>
+
+												</div>
+
+											</div>
+										</div>
+									</li>
+									<!-- END timeline item -->
+									<!-- timeline item -->
+									<li>
+										<i class="fa bg-time">2</i>
+										<div class="timeline-item">
+											<!--<span class="time"><i class="fa fa-clock-o"></i> 5 mins ago</span>-->
+											<h3 class="timeline-header no-border"><a href="#">2.传入参数</a> (最多30个参数)</h3>
+
+											<div class="timeline-body">
+												<div class="well">
+	<h5>用户需要传入正确的参数才能得到返回值</h5>
+</div>
+												<table class="footable-res footable table-hover" data-page-size="30">
+													<thead>
+														<tr>
+															<th data-sort-ignore="true">
+																参数名
+															</th>
+															<th>
+																参数值
+															</th>
+															<th>
+																说明
+															</th>
+															<th>
+																操作
+															</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td><h5>例子:username</h5></td>
+															<td><h5>例子:admin</h5></td>
+															<td><h5>例子:此字段代表用户的登录名称,必须要传</h5></td>
+															<td><a class="btn btn-danger btn-flat btn-xs">删除 <span class="fa fa-times"></span></a></td>
+														</tr>
+														<tr>
+															<td><input type="" name="" id="" value="" placeholder="请输入.." /></td>
+															<td><input type="" name="" id="" value="" placeholder="请输入.." /></td>
+															<td><input type="" name="" id="" value="" placeholder="请输入.." /></td>
+															<td><a class="btn btn-danger btn-flat btn-xs">删除 <span class="fa fa-times"></span></a></td>
+														</tr>
+														<tr>
+															<td><input type="" name="" id="" value="" placeholder="请输入.." /></td>
+															<td><input type="" name="" id="" value="" placeholder="请输入.." /></td>
+															<td><input type="" name="" id="" value="" placeholder="请输入.." /></td>
+															<td><a class="btn btn-danger btn-flat btn-xs">删除 <span class="fa fa-times"></span></a></td>
+														</tr>
+
+													</tbody>
+													
+												</table>
+
+											</div>
+											<div class="timeline-footer">
+												<a class="btn btn-primary btn-flat btn-xs">新建一行 <span class="fa fa-plus"></span></a>
+											</div>
+										</div>
+									</li>
+									<!-- END timeline item -->
+									<!-- timeline item -->
+									<li>
+										<i class="fa bg-time">3</i>
+										<div class="timeline-item">
+											<!--<span class="time"><i class="fa fa-clock-o"></i> 40 mins ago</span>-->
+											<h3 class="timeline-header"><a href="#">3.返回内容</a> (您是否需要 <a href="http://www.qqe2.com/" target="_blank">json在线编辑器</a>,编辑完成后复制进下框中)</h3>
+											<div class="timeline-body">
+												<div class="well">
+	<h5>用户访问此接口后,返回的内容如下,你填入什么就返回什么!</h5>
+</div>
+<textarea rows="15" style="width: 100%; border-color: #C7D5E0 !important;" placeholder="请填入正确的json内容.."></textarea>
+											</div>
+											<div class='timeline-footer'>
+												<h5 class="timeline-header">需要 <a href="http://www.baidu.com/s?cid=qb7.zhuye&ie=utf-8&wd=json" target="_blank">json</a>格式校验?</h5>
+											</div>
+										</div>
+									</li>
+									<!-- END timeline item -->
+									<li>
+										<div class="timeline-item">
+											<div class='timeline-footer'>
+												<a class="btn btn-info btn-flat btn-xs">提交制作 <span class="fa fa-check"></span></a>
+											</div>
+										</div>
+									</li>
+									<li>
+										<i class="fa fa-check bg-time"></i>
+									</li>
+								</ul>
+							</div>
+							<!-- /.col -->
+						</div>
+						<!-- /.row -->
+					</div>
+				</div>
+				<!--创建步骤结束-->
+
+				<!-- /END OF CONTENT -->
+
+				<!-- FOOTER -->
+				<div class="footer-space"></div>
+				<div id="footer">
+					<div class="devider-footer-left"></div>
+					<div class="time">
+						<p id="spanDate">
+							<p id="clock">
+					</div>
+					<div class="copyright">
+						版权所有(C) 北京布衣科技有限公司 ICP证号：京ICP备14015023号-2</div>
+					<div class="devider-footer"></div>
+
+				</div>
+				<!-- / END OF FOOTER -->
+			</div>
+		</div>
+		<!--  END OF PAPER WRAP -->
+
+		<!-- MAIN EFFECT -->
+		<script type="text/javascript" src="assets/js/bootstrap.js"></script>
+		<script type="text/javascript" src="assets/js/load.js"></script>
+		<script type="text/javascript" src="assets/js/main.js"></script>
+		<script type="text/javascript" src="assets/js/app.js"></script>
+
+		<!-- /MAIN EFFECT -->
+		<!-- GAGE -->
+		<script type="text/javascript" src="assets/js/validate/jquery.validate.min.js"></script>
+		<script src="assets/js/footable/js/footable.js?v=2-0-1" type="text/javascript"></script>
+
+		<script type="text/javascript">
+			$(function() {
+				$('.footable-res').footable();
+			});
+		</script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				//Validation
+				$('#contact-form').validate({
+					rules: {
+						name: {
+							minlength: 2,
+							required: true
+						},
+						email: {
+							required: true,
+							email: true
+						},
+						subject: {
+							minlength: 2,
+							required: true
+						},
+						message: {
+							minlength: 2,
+							required: true
+						}
+					},
+					highlight: function(element) {
+						$(element).closest('.control-group').removeClass('success').addClass('error');
+					},
+					success: function(element) {
+						element
+							.text('OK!').addClass('valid')
+							.closest('.control-group').removeClass('error').addClass('success');
+					}
+				});
+			});
+		</script>
+		<script>
+			function changeValue(obj) {
+				// alert("changed value is " + obj);
+				//console.log(obj);
+				var baseurl = "http://www.do-api.com/cuiwang/weixin/";
+				var weburl = baseurl + obj;
+				document.getElementById("weburl").placeholder = weburl;
+			}
+		</script>
+	</body>
+
+</html>

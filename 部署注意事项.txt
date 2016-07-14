@@ -1,0 +1,16 @@
+
+
+#########################################
+
+/src/main/resources/config/log4j-app.xml
+日志存储目录记得修改
+
+/src/main/resources/config/datasource-mysql.properties
+数据库IP及用户名密码记得修改
+
+/src/main/resources/config/spring-config.xml
+配置的路径及相关参数记得修改
+
+/src/main/resources/config/spring-servlet.xml
+上传文件的大小及相关参数记得修改
+

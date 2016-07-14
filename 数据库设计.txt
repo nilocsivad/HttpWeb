@@ -1,0 +1,86 @@
+
+######################################################
+# 创建数据库
+######################################################
+CREATE DATABASE `db-json` /*!40100 DEFAULT CHARACTER SET utf8 */;
+
+
+
+######################################################
+# 客户表
+######################################################
+CREATE TABLE `db-json`.`clientele` (
+  `clientID` int(10) NOT NULL AUTO_INCREMENT,
+  `clientName` varchar(96) NOT NULL,
+  `company` varchar(128) DEFAULT NULL,
+  `link` varchar(128) DEFAULT NULL,
+  `maxTemplate` tinyint(4) DEFAULT '10',
+  `dateTime` char(19) DEFAULT NULL,
+  `status` tinyint(2) NOT NULL DEFAULT '1' COMMENT '1->normal   0->deleted',
+  PRIMARY KEY (`clientID`)
+) ENGINE=InnoDB AUTO_INCREMENT=10004 DEFAULT CHARSET=utf8 COMMENT='client';
+
+######################################################
+# 清除表记录
+######################################################
+TRUNCATE `db-json`.`clientele`;
+
+######################################################
+# 插入客户表一条记录,强迫主键从10000开始
+######################################################
+INSERT INTO `db-json`.`clientele` (`clientID`, `clientName`, `company`, `link`, `status`) VALUES (10000, '北京木易科技信息技术有限公司', '北京木易科技信息技术有限公司', 'http://www.iam-vip.com', '1');
+
+
+
+######################################################
+# 登录信息表
+######################################################
+CREATE TABLE `db-json`.`login` (
+  `loginName` varchar(48) NOT NULL,
+  `password` char(32) NOT NULL COMMENT 'MD5',
+  `clientID` int(11) NOT NULL,
+  `type` tinyint(2) NOT NULL DEFAULT '1' COMMENT '1->Email   2->QQ   3->weibo   4->facebook   5->loginName',
+  `dateTime` char(19) DEFAULT NULL,
+  `status` tinyint(2) NOT NULL DEFAULT '0' COMMENT '1->normal   0->unauthorized   2->expired',
+  PRIMARY KEY (`loginName`),
+  UNIQUE KEY `loginName_UNIQUE` (`loginName`),
+  KEY `FK___login_clientele___clientID_idx` (`clientID`),
+  CONSTRAINT `FK_login_clientele___clientID` FOREIGN KEY (`clientID`) REFERENCES `clientele` (`clientID`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+
+######################################################
+# 登录TOKEN信息
+######################################################
+CREATE TABLE `db-json`.`token` (
+  `token` char(32) NOT NULL,
+  `clientID` int(11) NOT NULL,
+  `timeMillis` bigint(13) NOT NULL,
+  PRIMARY KEY (`clientID`),
+  KEY `FK___token_clientele___clientID_idx` (`clientID`),
+  CONSTRAINT `FK___token_clientele___clientID` FOREIGN KEY (`clientID`) REFERENCES `clientele` (`clientID`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+
+######################################################
+# JSON模版数据表
+######################################################
+CREATE TABLE `db-json`.`template` (
+  `templateID` int(11) NOT NULL AUTO_INCREMENT,
+  `clientID` int(11) NOT NULL,
+  `type` tinyint(2) NOT NULL DEFAULT '0' COMMENT '0->xml   1->',
+  `suffix` varchar(128) NOT NULL,
+  `status` tinyint(2) NOT NULL DEFAULT '0' COMMENT '0->normal   1->deleted',
+  `dateTime` char(19) DEFAULT NULL,
+  `what` tinytext,
+  PRIMARY KEY (`templateID`),
+  KEY `FK___template_clientele___clientID_idx` (`clientID`),
+  CONSTRAINT `FK___template_clientele___clientID` FOREIGN KEY (`clientID`) REFERENCES `clientele` (`clientID`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+
+
+

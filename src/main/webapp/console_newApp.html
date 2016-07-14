@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<!-- SITE TITLE -->
+		<title>Do API - 新建应用</title>
+		<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+		<!-- STYLESHEETS -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<link href="assets/js/iCheck/flat/all.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/sky-forms.css">
+		<link rel="stylesheet" href="css/templatemo0style.css">
+
+	</head>
+
+	<body class="templatemo-bg-gray" data-spy="scroll" data-target="#rock-navigation">
+		<!-- START NAVIGATION -->
+		<div class="navbar navbar-default bs-dos-nav" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button class="navbar-toggle" data-toggle="collapse" data-target="#rock-navigation">
+						<span class="icon icon-bar"></span>
+						<span class="icon icon-bar"></span>
+						<span class="icon icon-bar"></span>
+					</button>
+					<div>
+						<a href="#" class="navbar-brand" style="float: none;">Do - API</a>
+						<p style="color: #666666; font-size: 15px;">虚拟接口,做接口就是这么简单</p>
+					</div>
+				</div>
+				<nav class="collapse navbar-collapse" id="rock-navigation">
+					<ul class="nav navbar-nav navbar-right main-navigation text-uppercase">
+						<li><a href="index.html" class="smoothScroll">首页</a></li>
+						<li><a href="#">文档</a></li>
+						<li><a href="#">应用管理</a></li>
+						<li><a href="#">帮助</a></li>
+						<li><a href="#">吐槽</a></li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">个人中心 <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="#">个人资料</a></li>
+								<li><a href="#">新建应用</a></li>
+								<li role="separator" class="divider"></li>
+								<li><a href="#">退出</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+
+			</div>
+		</div>
+		<!-- END NAVIGATION -->
+		<div class="page-header">
+			<div class="container">
+				<h1>添加项目 <small style="float: right;">添加项目</small></h1>
+			</div>
+		</div>
+		<div class="container content">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <!--<div class="alert alert-warning" role="alert">
+                <p>注意：项目地址前缀固定不可编辑,可以在接口文档发布时,通过配置中心自定义修改。</p>
+            </div>-->
+
+            <form class="reg-page sky-form" id="form" method="POST" novalidate="novalidate">
+
+                <div class="reg-header">
+                    <p><img id="iconImg" src="images/favicon.ico" class="appicon" onerror="javascript:this.src='https://o1wjx1evz.qnssl.com/static-20160303/assets/img/default-icon.png';"></p>
+
+                    <div id="uploader-icon" class="btn btn-link" style="position: relative; overflow: hidden; direction: ltr;">
+                        <a href="javascript:void(0);" id="addicon">修改图标</a>
+                    </div>
+
+                    <br>
+                </div>
+
+                <section>
+                    <label class="label">名称 *</label>
+                    <label class="input">
+                        <i class="icon-append fa fa-pencil"></i>
+                        <input type="text" id="name" name="name" value="" placeholder="请输入应用名称">
+                    </label>
+                </section>
+
+                <!--<section>
+                    <label class="label">项目类型 *</label>
+                    <label class="input">
+                    <div class="skin-flat">
+                      <table>
+												<tr>
+													<td style="padding-left: 12px;">
+														<input tabindex="11" type="checkbox" id="square-checkbox-1" name="square-checkbox" checked="">
+													</td>
+													<td style="padding-left: 5px;padding-top: 5px;">
+														<label for="square-checkbox-1">iOS</label>
+													</td>
+												</tr>
+											</table>
+                    </div>
+                    </label>
+                </section>-->
+
+                <section>
+                    <label class="label">应用页面地址 *</label>
+                    <label class="input">
+                        <span class="icon-prepend" style="color:#666; width:180px; left:1px;top: 1px;height: 36px;line-height: 36px; background-color:#eee; font-weight:normal;">&nbsp;http://www.doapi.cn/</span>
+                        <input type="text" id="shortcutURL" name="shortcutURL" style="padding-left:190px;" value="" placeholder="请输入页面地址后缀">
+                    </label>
+                </section>
+
+                <section>
+                    <label class="label">应用介绍</label>
+                    <label class="textarea textarea-resizable">
+                        <textarea rows="6" placeholder="请输入应用介绍" name="description"></textarea>
+                    </label>
+                </section>
+
+                <hr>
+
+                <div class="row">
+                    <div class="col-md-6 col-xs-6 text-left">
+                    </div>
+                    <div class="col-md-6 text-right">
+                        <input type="hidden" name="key" id="key" value="">
+                        <input type="hidden" name="icon" id="icon">
+                        <button class="btn btn-default" type="submit" id="submitButton">添加项目</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+		<footer class="footer" style="padding-top: 80px;">
+			<div class="container">
+				<div class="text-center">
+					<p style="color: #999999;">版权所有(C) 北京布衣科技有限公司 ICP证号：京ICP备14015023号-2</p>
+				</div>
+			</div>
+		</footer>
+
+		<script src="js/jquery.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="assets/js/iCheck/jquery.icheck.js"></script>
+		<!--  PLUGIN -->
+		<script>
+			$(document).ready(function() {
+				//CHECKBOX PRETTYFY
+				$('.skin-flat input').iCheck({
+					checkboxClass: 'icheckbox_flat-purple',
+					radioClass: 'iradio_flat-blue'
+				});
+			});
+		</script>
+	</body>
+
+</html>

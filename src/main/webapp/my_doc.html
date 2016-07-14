@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="utf-8">
+		<title>接口文档</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<!-- Le styles -->
+		<script type="text/javascript" src="assets/js/jquery.js"></script>
+
+		<link rel="stylesheet" href="assets/css/bootstrap.css">
+		<link rel="stylesheet" href="assets/css/style.css">
+		<link rel="stylesheet" href="assets/css/loader-style.css">
+
+		<!--switch-->
+		<link href="assets/js/switch/bootstrap-switch.css" rel="stylesheet">
+		<link href="assets/js/iCheck/flat/all.css" rel="stylesheet">
+		<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+		<!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+		<!-- Fav and touch icons -->
+		<link rel="shortcut icon" href="assets/ico/minus.png">
+	</head>
+
+	<body>
+		<!-- TOP NAVBAR -->
+		<nav role="navigation" class="navbar navbar-static-top">
+			<div class="container-fluid">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" class="navbar-toggle" type="button">
+						<span class="entypo-menu"></span>
+					</button>
+					<button class="navbar-toggle toggle-menu-mobile toggle-left" type="button">
+						<span class="entypo-list-add"></span>
+					</button>
+
+					<div id="logo-mobile" class="visible-xs">
+						<h1>Do API<span>v1.3</span></h1>
+					</div>
+
+				</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
+					<ul class="nav navbar-nav">
+						<li>
+							<a data-toggle="dropdown" class="dropdown-toggle dropdown-menu-left" href="#">
+								<span class="entypo-down-open-big"></span>&#160;&#160;微信
+							</a>
+							<ul style="margin-top:14px;" role="menu" class="dropdown-wrap dropdown-menu">
+								<li>
+									<a href="#">
+										微博</a>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<a href="#">
+										淘宝</a>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<a href="#">
+										新浪</a>
+								</li>
+							</ul>
+						</li>
+
+					</ul>
+
+					<ul style="margin-right:0;" class="nav navbar-nav navbar-right">
+						<li>
+							<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+								<img alt="" class="admin-pic img-circle" src="https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=3410483824,3817000729&fm=58">Hi, 崔旺 <b class="caret"></b>
+							</a>
+							<ul style="margin-top:14px;" role="menu" class="dropdown-setting dropdown-menu">
+								<li>
+									<a href="#">
+										<span class="entypo-user"></span>&#160;&#160;控制台</a>
+								</li>
+								<li>
+									<a href="#">
+										<span class="entypo-vcard"></span>&#160;&#160;设置</a>
+								</li>
+								<li>
+									<a href="#">
+										<span class="entypo-lifebuoy"></span>&#160;&#160;帮助</a>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<a href="http://themeforest.net/item/apricot-navigation-admin-dashboard-template/7664475?WT.ac=category_item&WT.z_author=themesmile">
+										<span class="entypo-cancel"></span>&#160;&#160;退出</a>
+								</li>
+							</ul>
+						</li>
+						<!---->
+						<li>
+							<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+								<span class="icon-gear"></span>&#160;&#160;换肤</a>
+							<ul role="menu" class="dropdown-setting dropdown-menu">
+
+								<li class="theme-bg">
+									<div id="button-bg"></div>
+									<div id="button-bg2"></div>
+									<div id="button-bg3"></div>
+									<div id="button-bg5"></div>
+									<div id="button-bg6"></div>
+									<div id="button-bg7"></div>
+									<div id="button-bg8"></div>
+									<div id="button-bg9"></div>
+									<div id="button-bg10"></div>
+									<div id="button-bg11"></div>
+									<div id="button-bg12"></div>
+									<div id="button-bg13"></div>
+								</li>
+							</ul>
+						</li>
+
+					</ul>
+
+				</div>
+				<!-- /.navbar-collapse -->
+			</div>
+			<!-- /.container-fluid -->
+		</nav>
+		<!-- /END OF TOP NAVBAR -->
+
+		<!-- SIDE MENU -->
+		<div id="skin-select">
+			<div id="logo">
+				<h1>Do API<span style="margin-left: 5px;">内测</span></h1>
+			</div>
+
+			<a id="toggle">
+				<span class="entypo-menu"></span>
+			</a>
+
+			<div style="margin-top: -18px;">
+				<ul class="topnav menu-left-nest">
+					<li>
+						<a class="tooltip-tip ajax-load" href="index.html" title="概览">
+							<i class="icon-window"></i>
+							<span>概览</span>
+
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="skin-part">
+				<div id="tree-wrap">
+					<div class="side-bar">
+
+						<ul class="topnav menu-left-nest">
+							<li>
+								<a href="#" style="border-left:0px solid!important;" class="title-menu-left">
+
+									<span class="design-kit"></span>
+									<i data-toggle="tooltip" class="entypo-cog pull-right config-wrap"></i>
+
+								</a>
+							</li>
+
+							<li>
+								<a class="tooltip-tip ajax-load" href="myapi.html" title="我的接口">
+									<i class="icon-mail"></i>
+									<span>我的接口</span>
+									<div class="noft-blue">25</div>
+								</a>
+							</li>
+
+							<li>
+								<a class="tooltip-tip" href="#" title="API调试">
+									<i class="icon-document-new"></i>
+									<span>API调试</span>
+								</a>
+								<ul>
+									<li>
+										<a class="tooltip-tip2 ajax-load" href="blank_page.html" title="Blank Page"><i class="icon-media-record"></i><span>Blank Page</span></a>
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<a class="tooltip-tip " href="login.html" title="接口文档">
+									<i class="icon-download"></i>
+									<span>接口文档</span>
+								</a>
+							</li>
+
+						</ul>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- END OF SIDE MENU -->
+
+		<!--  PAPER WRAP -->
+		<div class="wrap-fluid">
+			<div class="container-fluid paper-wrap bevel tlbr">
+
+				<!-- CONTENT -->
+				<!-- BREADCRUMB -->
+				<ul id="breadcrumb">
+					<li>
+						<span class="entypo-home"></span>
+					</li>
+					<li><i class="fa fa-lg fa-angle-right"></i>
+					</li>
+					<li><a href="#" title="Sample page 1">接口文档</a>
+					</li>
+				</ul>
+
+				<!-- END OF BREADCRUMB -->
+				<!--基本信息-->
+				<div class="content-wrap">
+					<div class="row">
+
+						<div class="col-sm-12">
+							<!-- CONTENT PAGE-->
+
+							<div class="nest" id="CONTENT_PageClose">
+								<div class="title-alt">
+									<h6>
+                                    文档配置</h6>
+									<div class="titleClose">
+										<a class="gone" href="#CONTENT_PageClose">
+											<span class="entypo-cancel"></span>
+										</a>
+									</div>
+									<div class="titleToggle">
+										<a class="nav-toggle-alt" href="#CONTENT_Page_Content">
+											<span class="entypo-up-open"></span>
+										</a>
+									</div>
+
+								</div>
+
+								<div class="body-nest" id="CONTENT_Page_Content">
+									<div class="col-sm-10">
+										<!--接口文档-->
+										<ul class="list-inline">
+<li>
+	<img src="images/favicon.ico" width="80px" height="80px" alt="" />
+</li>
+											<li>
+												<h2>微信</h2>
+											</li>
+											<li>
+												<h5>社交软件中的领头羊,腾讯旗下APP</h5>
+											</li>
+
+										</ul>
+
+										<ul class="list-inline" style="margin-top: -10px;">
+											<li>
+												<h4>文档地址:</h4>
+											</li>
+											<li>
+												<h4><a style="color: #949494;" href="">http://www.do-api.com/mryys/weixin/doc</a></h4>
+											</li>
+											<li>
+												<a style="color: #666666;">点击查看</a>
+											</li>
+
+										</ul>
+										<!--发布文档-->
+										<div style="margin-top: 15px;">
+											<ul class="list-inline">
+												<li>
+													<h4>发布文档:</h4>
+												</li>
+												<li>
+													<div style="margin-top: -6px;" class="make-switch switch-mini" data-on="info" data-off="default" data-on-label="<i class='icon icon-checkmark'></i>" data-off-label="<i class='icon icon-cross'></i>">
+														<input type="checkbox" checked="">
+													</div>
+												</li>
+												<li>|</li>
+												<li>
+													<h4>动态生成:</h4>
+												</li>
+												<li>
+													<div style="margin-top: -6px;" class="make-switch switch-mini" data-on="info" data-off="default" data-on-label="<i class='icon icon-checkmark'></i>" data-off-label="<i class='icon icon-cross'></i>">
+														<input disabled="disabled" type="checkbox" checked="">
+													</div>
+												</li>
+
+											</ul>
+
+										</div>
+										<!--访问权限-->
+										<div class="skin-flat">
+											<table>
+												<tr>
+													<td>
+														<h4>访问权限:</h4>
+													</td>
+													<td style="padding-left: 11px;">
+														<input tabindex="11" type="checkbox" id="square-checkbox-1" name="square-checkbox" checked="">
+													</td>
+													<td style="padding-left: 5px;padding-top: 5px;">
+														<label for="square-checkbox-1">全部可见</label>
+													</td>
+													<td style="padding-left: 12px;">&ensp;|&ensp;</td>
+													<td style="padding-left: 12px;">
+														<input tabindex="11" type="checkbox" id="square-checkbox-1" name="square-checkbox">
+													</td>
+													<td style="padding-left: 5px;padding-top: 5px;">
+														<label for="square-checkbox-1">需要密码</label>
+													</td>
+													<td style="padding-left: 12px;">
+														<form role="form" class="form-inline">
+															<div class="form-group">
+																<label for="exampleInputEmail2" class="sr-only">Password</label>
+																<input type="email" placeholder="Password" id="exampleInputEmail2" class="form-control">
+															</div>
+															<button class="btn btn-primary" type="submit">确定</button>
+														</form>
+													</td>
+
+												</tr>
+											</table>
+
+										</div>
+										<div style="clear:both; margin-bottom: 10px;"></div>
+
+									</div>
+									<div class="col-sm-2">
+										<div class="pull-right" style="padding-top: 15px;">
+											<img src="assets/img/ewm.jpg" width="120px" height="120px" alt="" />
+											<h6 class="text-center">扫描二维码</h6>
+										</div>
+									</div>
+									<div class="col-sm-12">
+										<hr />
+										<!--pdf生成-->
+										<div>
+											<label class="label label-default" style="margin-bottom: 20px;">自定义</label>
+											
+											<!--文档标题-->
+											<ul class="list-inline">
+												<li style="width: 100px;">
+													<h4>标题:</h4>
+												</li>
+												<li>
+													<input style="width: 200px;" type="" name="" id="" value="" />
+												</li>
+												<li><button class="btn btn-primary" type="submit">确认</button></li>
+
+											</ul>
+											<!--文档标题结束-->
+											<!--文档版本号-->
+											<ul class="list-inline">
+												<li style="width: 100px;">
+													<h4>版本号:</h4>
+												</li>
+												<li>
+													<input style="width: 200px;" type="" name="" id="" value="" />
+												</li>
+												<li><button class="btn btn-primary" type="submit">确认</button></li>
+
+											</ul>
+											<!--文档版本号结束-->
+											<!--文档说明-->
+											<ul class="list-inline">
+												<li style="width: 100px;">
+													<h4>说明介绍:</h4>
+												</li>
+												<li>
+													<input style="width: 200px;" type="" name="" id="" value="" />
+												</li>
+												<li><button class="btn btn-primary" type="submit">确认</button></li>
+
+											</ul>
+											<!--文档说明结束-->
+											<!--Base URL-->
+											<ul class="list-inline">
+												<li style="width: 100px;">
+													<h4>Base URL:</h4>
+												</li>
+												<li>
+													<input style="width: 200px;" type="" name="" id="" value="" />
+												</li>
+												<li><button class="btn btn-primary" type="submit">确认</button></li>
+
+											</ul>
+											<!--Base URL END-->
+
+										</div>
+										<!--pdf生成结束-->
+									</div>
+
+									<div class="col-sm-12">
+										<hr />
+										<!--pdf生成-->
+										<div>
+											<label class="label label-default" style="margin-bottom: 20px;">PDF相关</label>
+											<ul class="list-inline">
+												<li>
+													<h4>样式选择:</h4>
+												</li>
+												<li>
+													<button class="btn btn-primary" type="submit">清新</button>
+												</li>
+												<li>
+													<button class="btn btn-primary" type="submit">高贵</button>
+												</li>
+												<li>
+													<button class="btn btn-primary" type="submit">优雅</button>
+												</li>
+												<li>
+													<button class="btn btn-primary" type="submit">优雅</button>
+												</li>
+												<li>
+													<button class="btn btn-primary" type="submit">优雅</button>
+												</li>
+												<li>
+													<button class="btn btn-primary" type="submit">优雅</button>
+												</li>
+												<li>
+													<button class="btn btn-primary" type="submit">更多选择</button>
+												</li>
+
+											</ul>
+											<!--水印位置-->
+											<ul class="list-inline">
+												<li>
+													<h4>水印位置:</h4>
+												</li>
+												<li>
+													<button class="btn btn-primary" type="submit">上</button>
+												</li>
+												<li>
+													<button class="btn btn-primary" type="submit">中</button>
+												</li>
+												<li>
+													<button class="btn btn-primary" type="submit">下</button>
+												</li>
+												<li>
+													<button class="btn btn-primary" type="submit">无 (vip)</button>
+												</li>
+												<li>
+													<button class="btn btn-primary" type="submit">自定义</button>
+												</li>
+
+											</ul>
+											<!--水印位置结束-->
+											<!--生成PDF-->
+											<ul class="list-inline">
+												<li>
+													<h4>生成PDF:</h4>
+												</li>
+												<li>
+													<button class="btn btn-danger" type="submit">立即下载</button>
+												</li>
+
+											</ul>
+											<!--生成PDF结束-->
+										</div>
+										<!--pdf生成结束-->
+									</div>
+								</div>
+
+								<div style="clear:both; margin-bottom: 20px;"></div>
+
+							</div>
+							<!--<button class="btn btn-info pull-right">Read More</button>-->
+						</div>
+					</div>
+					<!-- END OF CONTENT PAGE -->
+				</div>
+				<!--基本信息结束-->
+
+				<!-- /END OF CONTENT -->
+			</div>
+		</div>
+
+		<!-- /END OF CONTENT -->
+		<!-- FOOTER -->
+		<div class="footer-space"></div>
+		<div id="footer">
+			<div class="devider-footer-left"></div>
+			<div class="time">
+				<p id="spanDate">
+					<p id="clock">
+			</div>
+			<div class="copyright">
+				版权所有(C) 北京布衣科技有限公司 ICP证号：京ICP备14015023号-2</div>
+			<div class="devider-footer"></div>
+
+		</div>
+		<!-- / END OF FOOTER -->
+		</div>
+		</div>
+		<!--  END OF PAPER WRAP -->
+
+		<!-- MAIN EFFECT -->
+		<script type="text/javascript" src="assets/js/bootstrap.js"></script>
+		<script type="text/javascript" src="assets/js/load.js"></script>
+		<script type="text/javascript" src="assets/js/main.js"></script>
+		<script type="text/javascript" src="assets/js/app.js"></script>
+
+		<!-- /MAIN EFFECT -->
+		<!-- GAGE -->
+		<script type="text/javascript" src="assets/js/toggle_close.js"></script>
+		<script type="text/javascript" src="assets/js/switch/bootstrap-switch.js"></script>
+		<script type="text/javascript" src="assets/js/iCheck/jquery.icheck.js"></script>
+		<!--  PLUGIN -->
+		<script>
+			$(document).ready(function() {
+				//CHECKBOX PRETTYFY
+				$('.skin-flat input').iCheck({
+					checkboxClass: 'icheckbox_flat-purple',
+					radioClass: 'iradio_flat-blue'
+				});
+			});
+		</script>
+
+	</body>
+
+</html>
